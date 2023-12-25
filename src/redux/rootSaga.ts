@@ -1,10 +1,5 @@
-import { all, fork, type AllEffect, type ForkEffect } from 'redux-saga/effects';
-import counterSagas from './counter/saga';
+import { all } from 'redux-saga/effects';
 
-export default function* rootSaga(): Generator<
-  AllEffect<ForkEffect<void>>,
-  void,
-  unknown
-> {
-  yield all([fork(counterSagas)]);
+export function* rootSaga() {
+  yield all([]);
 }
